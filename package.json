@@ -2,8 +2,8 @@
   "name": "radix64-encoding",
   "description": "Radix64 encoding, a.k.a. Base64 encoding. An extremely fast and synchronous JS implementation.",
   "version": "1.0.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/node.js",
+  "types": "dist/node.d.ts",
   "exports": {
     "node": "./dist/node.js",
     "default": "./dist/browser.js"
