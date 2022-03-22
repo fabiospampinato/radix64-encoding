@@ -2,9 +2,10 @@
 /* IMPORT */
 
 const abab = require ( 'abab' );
+const {Buffer} = require ( 'buffer' );
 const fc = require ( 'fast-check' );
 const {describe} = require ( 'fava' );
-const {default: Radix64} = require ( '../dist' );
+const {default: Radix64} = require ( '../dist/node' );
 const Fixtures = require ( './fixtures' );
 
 global.atob = abab.atob;
@@ -53,7 +54,16 @@ describe ( 'Radix64', it => {
 
   });
 
-  it ( 'can detect Radix64-encoded strings', t => {
+  it ( 'works like Buffer', t => {
+
+    const assert = str => Radix64.is ( str ) ? t.deepEqual ( Radix64.encodeStr ( str ), Buffer.from ( str ).toString ( 'base64' ) ) : t.pass ();
+    const property = fc.property ( fc.fullUnicodeString (), assert );
+
+    fc.assert ( property, { numRuns: 1000000 } );
+
+  });
+
+  it ( 'can detect radix64-encoded strings', t => {
 
     const fixtures = [
       ['', true],

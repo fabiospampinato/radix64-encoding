@@ -4,9 +4,13 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    "node": "./dist/node.js",
+    "default": "./dist/browser.js"
+  },
   "scripts": {
     "clean": "rimraf dist",
-    "compile": "tsc --skipLibCheck && tstei",
+    "compile": "tsc --skipLibCheck",
     "compile:watch": "tsc --skipLibCheck --watch",
     "test": "fava",
     "test:watch": "fava -w",
@@ -34,11 +38,11 @@
     "uint8-encoding": "^1.0.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.22",
     "abab": "^2.0.5",
-    "fast-check": "^2.17.0",
-    "fava": "^0.0.4",
+    "fast-check": "^2.23.2",
+    "fava": "^0.0.5",
     "rimraf": "^3.0.2",
-    "typescript": "^4.4.3",
-    "typescript-transform-export-interop": "^1.0.4"
+    "typescript": "^4.6.2"
   }
 }
