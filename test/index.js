@@ -15,6 +15,12 @@ global.btoa = abab.btoa;
 
 describe ( 'Radix64', it => {
 
+  it ( 'returns an actual Uint8Array', t => {
+
+    t.is ( Radix64.decode ( 'Zm9v' ).constructor, Uint8Array );
+
+  });
+
   it ( 'works with strings', t => {
 
     for ( const fixture of Fixtures ) {
