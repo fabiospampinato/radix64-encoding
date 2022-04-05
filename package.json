@@ -2,7 +2,7 @@
   "name": "radix64-encoding",
   "repository": "github:fabiospampinato/radix64-encoding",
   "description": "Radix64 encoding, a.k.a. Base64 encoding. An extremely fast and synchronous JS implementation.",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "type": "module",
   "main": "dist/node.js",
   "types": "./dist/node.d.ts",
