@@ -1,32 +1,22 @@
 {
   "name": "radix64-encoding",
+  "repository": "github:fabiospampinato/radix64-encoding",
   "description": "Radix64 encoding, a.k.a. Base64 encoding. An extremely fast and synchronous JS implementation.",
   "version": "1.0.2",
+  "type": "module",
   "main": "dist/node.js",
-  "types": "dist/node.d.ts",
+  "types": "./dist/node.d.ts",
   "exports": {
     "node": "./dist/node.js",
     "default": "./dist/browser.js"
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "compile": "tsc --skipLibCheck",
-    "compile:watch": "tsc --skipLibCheck --watch",
-    "test": "fava",
-    "test:watch": "fava -w",
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "test": "tsex test",
+    "test:watch": "tsex test --watch",
     "prepublishOnly": "npm run clean && npm run compile && npm run test"
-  },
-  "bugs": {
-    "url": "https://github.com/fabiospampinato/radix64-encoding/issues"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Fabio Spampinato",
-    "email": "spampinabio@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fabiospampinato/radix64-encoding.git"
   },
   "keywords": [
     "radix64",
@@ -35,14 +25,14 @@
     "fast"
   ],
   "dependencies": {
-    "uint8-encoding": "^1.0.0"
+    "uint8-encoding": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.22",
+    "@types/node": "^17.0.23",
     "abab": "^2.0.5",
-    "fast-check": "^2.23.2",
-    "fava": "^0.0.5",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.2"
+    "fast-check": "^2.24.0",
+    "fava": "^0.0.6",
+    "tsex": "^1.0.4",
+    "typescript": "^4.6.3"
   }
 }

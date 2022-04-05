@@ -77,7 +77,7 @@ const Browser = {
 
     const binary = atob ( data );
 
-    if ( !/[^\x00-\x7F]/.test ( binary ) ) return binary; // Only latin1 characters, same as UTF-8 already
+    if ( !/[^\x00-\x7F]/.test ( binary ) ) return binary; // Only ascii characters, same as UTF-8 already
 
     const u8 = new Uint8Array ( binary.length );
 
