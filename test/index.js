@@ -1,16 +1,12 @@
 
 /* IMPORT */
 
-import abab from 'abab';
 import fc from 'fast-check';
 import {describe} from 'fava';
 import {Buffer} from 'node:buffer';
 import Radix64Browser from '../dist/browser.js';
 import Radix64Node from '../dist/node.js';
 import Fixtures from './fixtures.js';
-
-global.atob = abab.atob;
-global.btoa = abab.btoa;
 
 /* MAIN */
 

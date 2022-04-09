@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-import {Buffer} from 'node:buffer';
+import Buffer from 'node-buffer-encoding';
 import is from './is';
 
 /* MAIN */
@@ -12,27 +12,25 @@ const Node = {
 
   encode: ( data: Uint8Array ): string => {
 
-    return Buffer.from ( data ).toString ( 'base64' );
+    return Buffer.encode ( data, 'base64' );
 
   },
 
   encodeStr: ( data: string ): string => {
 
-    return Buffer.from ( data ).toString ( 'base64' );
+    return Buffer.encodeStr ( data, 'base64' );
 
   },
 
   decode: ( data: string ): Uint8Array => {
 
-    const buffer = Buffer.from ( data, 'base64' );
-
-    return new Uint8Array ( buffer.buffer, buffer.byteOffset, buffer.byteLength );
+    return Buffer.decode ( data, 'base64' );
 
   },
 
   decodeStr: ( data: string ): string => {
 
-    return Buffer.from ( data, 'base64' ).toString ();
+    return Buffer.decodeStr ( data, 'base64' );
 
   },
 
