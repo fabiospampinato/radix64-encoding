@@ -26,7 +26,7 @@ import Radix64 from 'radix64-encoding';
   console.log ( encoded ); // => 'SGVsbG8g8J+Ygw=='
 
   const decoded = Radix64.decodeStr ( encoded );
-  console.log ( decoded ); // => // => Uint8Array(10) [ 72, 101, 108, 108, 111,  32, 240, 159, 152, 131 ]
+  console.log ( decoded ); // => Uint8Array(10) [ 72, 101, 108, 108, 111,  32, 240, 159, 152, 131 ]
 }
 
 // String encoding & decoding
