@@ -7,7 +7,7 @@ If you can make this faster without using WASM or async stuff please ping me.
 ## Install
 
 ```sh
-npm install --save radix64-encoding
+npm install radix64-encoding
 ```
 
 ## Usage
